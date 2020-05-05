@@ -3,11 +3,12 @@
 import pyautogui
 import time
 
-# this is used to give you time to open up the messages app and click into the text box.
-time.sleep(3)
+fileName = input("What file do you want to use? (ex. test.txt) ")
 
-# Specify what text file to use.
-file = open("docs/test.txt")
+# this is used to give you time to open up the messages app and click into the text box.
+time.sleep(6)
+
+file = open("docs/" + fileName)
 
 for words in file:
     word = words.split()
