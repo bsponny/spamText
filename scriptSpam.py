@@ -15,4 +15,4 @@ for words in file:
     for i in word:
         pyautogui.write(i)
         pyautogui.press('enter')
-        time.sleep(0.001)
+        time.sleep(1)
