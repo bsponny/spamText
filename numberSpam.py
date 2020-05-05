@@ -1,0 +1,19 @@
+import pyautogui
+import time
+
+name = input("Enter the name of the person: ")
+gen = input("What pronoun should we use? Type 'he' or 'she': ")
+
+# this is used to give you time to open up the messages app and click into the text box.
+time.sleep(6)
+
+pyautogui.write("Welcome to \"Let's See How High We Can Count before " + name + " Responds!\" I'm your host Brock Sponenburgh!")
+pyautogui.write(" You know the rules, if " + name + " responds before we count to 100, " + gen + " wins, if not, we win!")
+pyautogui.write(" Now. LET'S GET COUNTING!!")
+pyautogui.press('enter')
+time.sleep(1)
+
+for i in range (1, 101):
+    pyautogui.write(str(i))
+    pyautogui.press('enter')
+    time.sleep(1)
