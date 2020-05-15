@@ -3,6 +3,8 @@
 import pyautogui
 import time
 
+print("TODO: Find a way to list all the files in the doc's directory!")
+
 fileName = input("What file do you want to use? (ex. test.txt) ")
 speed = 2
 
