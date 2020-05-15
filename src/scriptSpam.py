@@ -2,10 +2,16 @@
 
 import pyautogui
 import time
+import os
 
-print("TODO: Find a way to list all the files in the doc's directory!")
+dirs = os.listdir("docs/")
 
-fileName = input("What file do you want to use? (ex. test.txt) ")
+print("What file do you want to use? (ex. test.txt)")
+print("\tFiles Available for Use:")
+for file in dirs:
+    print("\t\t" + file)
+
+fileName = input()
 speed = 2
 
 # this is used to give you time to open up the messages app and click into the text box.
