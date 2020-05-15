@@ -4,6 +4,7 @@ import pyautogui
 import time
 
 fileName = input("What file do you want to use? (ex. test.txt) ")
+speed = 2
 
 # this is used to give you time to open up the messages app and click into the text box.
 time.sleep(6)
@@ -15,4 +16,4 @@ for words in file:
     for i in word:
         pyautogui.write(i)
         pyautogui.press('enter')
-        time.sleep(2)
+        time.sleep(speed)
