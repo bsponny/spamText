@@ -12,7 +12,7 @@ for file in dirs:
     print("\t\t" + file)
 
 fileName = input()
-speed = 2
+speed = 3
 
 # this is used to give you time to open up the messages app and click into the text box.
 time.sleep(6)
