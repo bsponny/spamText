@@ -13,6 +13,7 @@ for file in dirs:
 
 fileName = input()
 speed = 2
+print("Click on the message box")
 
 # this is used to give you time to open up the messages app and click into the text box.
 time.sleep(6)
@@ -25,3 +26,4 @@ for words in file:
         pyautogui.write(i)
         pyautogui.press('enter')
         time.sleep(speed)
+print("Thanks for Playing!")
