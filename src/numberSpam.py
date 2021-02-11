@@ -3,12 +3,13 @@ import pyautogui, time, msvcrt
 name = input("Enter the name of the person: ")
 gen = input("What pronoun should we use? Type 'he' or 'she': ")
 number = int(input("How high would you like to count? "))
-message = "Click on the message box"
+messageBox = "Click on the message box"
 speed = 3
+clickSpeed = 6
 
-# this is used to give you time to open up the messages app and click into the text box.
-print(message)
-time.sleep(6)
+# this is used to give you time to open up the messageBoxs app and click into the text box.
+print(messageBox)
+time.sleep(clickSpeed)
 
 pyautogui.write("Welcome to \"Let's See How High We Can Count Before " + name + " Responds!\" I'm your host Brock Sponenburgh!")
 pyautogui.press('enter')
@@ -31,20 +32,22 @@ response = True
 while (response == True):
     end = input("Did " + name + " win (1) or lose (2)? ")
     if end == "1":
-        print(message)
-        time.sleep(6)
-        pyautogui.write("Sorry " + name + ", it looks like you lost.")
-        pyautogui.press('enter')
-        time.sleep(speed)
-        response = False
-    elif end == "2":
-        print(message)
         endNum = input("What number did you stop at? ")
-        time.sleep(6)
+        print(messageBox)
+        time.sleep(clickSpeed)
         pyautogui.write("Congrats " + name + " YOU WON!!! We counted to " + endNum + ".")
         pyautogui.press('enter')
         time.sleep(speed)
         response = False
+
+    elif end == "2":
+        print(messageBox)
+        time.sleep(clickSpeed)
+        pyautogui.write("Sorry " + name + ", it looks like you lost.")
+        pyautogui.press('enter')
+        time.sleep(speed)
+        response = False
+
     else:
         print("Sorry. That is not a valid response. Try again.")
         response = True
